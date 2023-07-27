@@ -1,0 +1,1 @@
+module.exports = uri = "mongodb+srv://admin:adminadmin@atlascluster.q17umpp.mongodb.net/?retryWrites=true&w=majority"

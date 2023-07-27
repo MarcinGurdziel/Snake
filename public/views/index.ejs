@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="board">
+      <div class="game_details">
+        <span class="score">Score: 0</span>
+        <span class="highest_score">Highest score: -</span>
+      </div>
+      <div class="game_board"></div>
+    </div>
+    <div class="table">
+      <div class="game_details">
+        <span class="score">The best players:</span>
+      </div>
+        <div class="best_users">
+          <% for (let i = 0; i < data.length; i++) { %>
+          <span class="score"
+            ><%= i+1 + ". "%> <%= data[i].score + "pts"%> <%= data[i].name
+            %></span
+          >
+          <br />
+          <% } %>
+        </div>
+
+    </div>
+    <div class="popup" id="popup">
+      <h2 class="highest_score2"> Save your highest score: </h2>
+      <div class="inputbox">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name"
+          maxlength="8"
+          required
+        />
+        <button id="save">Save</button> <br />
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+    <footer id="footer">
+      <a href="https://github.com/MarcinGurdziel">GitHub</a>
+      <a href="https://www.linkedin.com/in/marcingurdziel/">LinkedIn</a>
+      <p>Marcin Gurdziel 2023</p>
+    </footer>
+  </body>
+</html>
